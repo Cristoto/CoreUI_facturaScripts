@@ -12748,10 +12748,14 @@ html:not([dir="rtl"]) .sidebar-show .sidebar {
 
 @media (min-width: 576px) {
   /* Added this line to effect move to FS Content */
-  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed #mainTabs,
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed ul#mainTabs,
   html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .table-responsive,
   html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .container-fluid{
       padding-left: 210px;
+  }
+  
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed div#mainTabs{
+      padding-left: 0px;
   }
   /*-----------------------------------------------*/ 
     
@@ -13142,10 +13146,14 @@ html[dir="rtl"] .aside-menu-show .aside-menu {
 
 @media (min-width: 992px) and (min-width: 576px) {
   /* Added this line to effect move to FS Content */
-  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed #mainTabs,
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed ul#mainTabs,
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .table-responsive,
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .container-fluid{
       padding-left: 210px;
+  }
+  
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed div#mainTabs{
+      padding-left: 0px;
   }
   /*-----------------------------------------------*/
   
