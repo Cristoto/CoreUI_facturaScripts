@@ -12757,6 +12757,10 @@ html:not([dir="rtl"]) .sidebar-show .sidebar {
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed div#mainTabs{
       padding-left: 0px;
   }
+  
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .alert{
+      padding-left: 210px;
+  }
   /*-----------------------------------------------*/ 
     
   html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .main,
@@ -13154,6 +13158,10 @@ html[dir="rtl"] .aside-menu-show .aside-menu {
   
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed div#mainTabs{
       padding-left: 0px;
+  }
+  
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .alert{
+      padding-left: 210px;
   }
   /*-----------------------------------------------*/
   
