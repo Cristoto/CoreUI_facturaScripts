@@ -67,10 +67,9 @@ class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
         $menuId = $this->getMenuId($parent);
         
         $html = empty($parent) ? '<li class="nav-item nav-dropdown">'
-            . '<a class="nav-link nav-dropdown-toggle" href="#">'
+            . '<a class="nav-link nav-dropdown-toggle" href="#" id="'. $menuId .'">'
             . $this->getHTMLIcon() . \ucfirst($this->title) .'</a>'
-            . '<ul class="nav-dropdown-items">'
-            : null;
+            . '<ul class="nav-dropdown-items">' : var_dump('preuba');
         
         foreach ($this->menu as $menuItem){
             $html .= empty($menuItem->menu) ? '<li class="nav-item">'
