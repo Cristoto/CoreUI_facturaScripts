@@ -63,7 +63,7 @@ class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
     {
         $active = $this->active ? ' active' : '';
         $menuId = $this->getMenuId($parent);
-
+        
         $html = empty($parent) ? '<li class="nav-item nav-dropdown">'
             . '<a class="nav-link nav-dropdown-toggle" href="#" id="' . $menuId . '">'
             . $this->getHTMLIcon() . \ucfirst($this->title) . '</a>'
@@ -74,8 +74,8 @@ class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
             . '<ul class="dropdown-menu" aria-labelledby="' . $menuId . '">';
 
         foreach ($this->menu as $menuItem) {
-
             if ($menuItem->name === "control-panel") {
+                $html .= $this->writeHtml($menuItem->menu["EditSettings"]);
                 $html .= $this->writeHtml($menuItem->menu["AdminPlugins"]);
                 $html .= $this->writeHtml( $menuItem->menu["Updater"]);
             } else {
