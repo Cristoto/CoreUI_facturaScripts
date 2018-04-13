@@ -19,14 +19,14 @@
         {% endblock %}
         {% block icons %}
             <!-- Icons-->
-            <link rel="shortcut icon" href="{{ asset('Plugins/CoreUI_template/Assets/img/favicon.ico') }}">
-            <link href="{{ asset('Plugins/CoreUI_template/node_modules/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
-            <link href="{{ asset('Plugins/CoreUI_template/node_modules/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-            <link href="{{ asset('Plugins/CoreUI_template/node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
+            <link rel="shortcut icon" href="{{ asset('Plugins/CoreuiTemplate/Assets/img/favicon.ico') }}">
+            <link href="{{ asset('Plugins/CoreuiTemplate/node_modules/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('Plugins/CoreuiTemplate/node_modules/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('Plugins/CoreuiTemplate/node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
         {% endblock %}
         {% block css %}
             <!-- Main styles for this application-->
-            <link rel="stylesheet" href="{{ asset('Plugins/CoreUI_template/Assets/css/style.css') }}" />
+            <link rel="stylesheet" href="{{ asset('Plugins/CoreuiTemplate/Assets/css/style.css') }}" />
         {% endblock %}
         {% block javascript %}
         
@@ -41,8 +41,8 @@
                 </button>
                 {# LOGO #}
                 <a class="navbar-brand" href="#">
-                    <img class="navbar-brand-full" src="{{ asset('Plugins/CoreUI_template/Assets/img/horizontal-logo.png') }}" width="89" height="25" alt="FS Logo">
-                    <img class="navbar-brand-minimized" src="{{ asset('Plugins/CoreUI_template/Assets/img/logo.png') }}" width="30" height="30" alt="FS Logo">
+                    <img class="navbar-brand-full" src="{{ asset('Plugins/CoreuiTemplate/Assets/img/horizontal-logo.png') }}" width="89" height="25" alt="FS Logo">
+                    <img class="navbar-brand-minimized" src="{{ asset('Plugins/CoreuiTemplate/Assets/img/logo.png') }}" width="30" height="30" alt="FS Logo">
                 </a>
                 <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
                     <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <img class="img-avatar" src="{{ asset('Plugins/CoreUI_template/Assets/img/avatars/6.jpg') }}" alt="{{ fsc.user.nick }}">
+                        <img class="img-avatar" src="{{ asset('Plugins/CoreuiTemplate/Assets/img/avatars/6.jpg') }}" alt="{{ fsc.user.nick }}">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <div class="dropdown-header text-center">
@@ -103,15 +103,15 @@
 
             {% block javascriptfooter %}
                 <!-- Bootstrap and necessary plugins-->
-                <script type="text/javascript" src="{{ asset('Plugins/CoreUI_template/node_modules/jquery/dist/jquery.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('Plugins/CoreUI_template/node_modules/popper.js/dist/umd/popper.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('Plugins/CoreUI_template/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('Plugins/CoreUI_template/node_modules/pace-progress/pace.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('Plugins/CoreUI_template/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('Plugins/CoreUI_template/node_modules/@coreui/coreui/dist/js/coreui.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/jquery/dist/jquery.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/popper.js/dist/umd/popper.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/pace-progress/pace.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/@coreui/coreui/dist/js/coreui.min.js') }}"></script>
                 <!-- Plugins and scripts required by this view-->
-                <script type="text/javascript" src="{{ asset('Plugins/CoreUI_template/node_modules/chart.js/dist/Chart.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('Plugins/CoreUI_template/node_modules/@coreui/plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/chart.js/dist/Chart.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/@coreui/plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js') }}"></script>
             {% endblock %}
         </body>
      {% endblock %}
