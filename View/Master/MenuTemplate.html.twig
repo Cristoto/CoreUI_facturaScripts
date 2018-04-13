@@ -19,17 +19,37 @@
         {% endblock %}
         {% block icons %}
             <!-- Icons-->
-            <link rel="shortcut icon" href="{{ asset('Plugins/CoreuiTemplate/Assets/img/favicon.ico') }}">
+            <link rel="shortcut icon" href="{{ asset('Plugins/CoreuiTemplate/Assets/Images/favicon.ico') }}">
             <link href="{{ asset('Plugins/CoreuiTemplate/node_modules/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
             <link href="{{ asset('Plugins/CoreuiTemplate/node_modules/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
             <link href="{{ asset('Plugins/CoreuiTemplate/node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
         {% endblock %}
         {% block css %}
+            <link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}" />
+            <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
             <!-- Main styles for this application-->
-            <link rel="stylesheet" href="{{ asset('Plugins/CoreuiTemplate/Assets/css/style.css') }}" />
+            <link rel="stylesheet" href="{{ asset('Plugins/CoreuiTemplate/Assets/CSS/style.css') }}" />
+
+            <link rel="stylesheet" href="{{ asset('node_modules/font-awesome/css/font-awesome.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('node_modules/jquery-ui-dist/jquery-ui.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('Dinamic/Assets/CSS/custom.css') }}" />
         {% endblock %}
         {% block javascript %}
-        
+            <script src="{{ asset('node_modules/jquery/dist/jquery.min.js') }}"></script>
+            <script src="{{ asset('node_modules/popper.js/dist/umd/popper.min.js') }}"></script>
+            <script src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('node_modules/bootbox/bootbox.min.js') }}"></script>
+            <script src="{{ asset('node_modules/jscolor-picker/jscolor.min.js') }}"></script>
+            <script src="{{ asset('node_modules/jquery-ui-dist/jquery-ui.min.js') }}"></script>
+            <script src="{{ asset('Plugins/CoreuiTemplate/Assets/JS/custom.js') }}"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    var email = "{{ fsc.user.email }}";
+                    var gravatar = getGravatar(email);
+                    $("#gravatar").attr("src", gravatar);
+
+                });
+            </script>
         {% endblock %}
         {{ debugBarRender.renderHead()|raw }}
     </head>
@@ -40,9 +60,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {# LOGO #}
-                <a class="navbar-brand" href="#">
-                    <img class="navbar-brand-full" src="{{ asset('Plugins/CoreuiTemplate/Assets/img/horizontal-logo.png') }}" width="89" height="25" alt="FS Logo">
-                    <img class="navbar-brand-minimized" src="{{ asset('Plugins/CoreuiTemplate/Assets/img/logo.png') }}" width="30" height="30" alt="FS Logo">
+                <a class="navbar-brand" href="index.php">
+                    <img class="navbar-brand-full" src="{{ asset('Plugins/CoreuiTemplate/Assets/Images/horizontal-logo.png') }}" width="89" height="25" alt="FS Logo">
+                    <img class="navbar-brand-minimized" src="{{ asset('Plugins/CoreuiTemplate/Assets/Images/logo.png') }}" width="30" height="30" alt="FS Logo">
                 </a>
                 <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
                     <span class="navbar-toggler-icon"></span>
@@ -50,7 +70,7 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <img class="img-avatar" src="{{ asset('Plugins/CoreuiTemplate/Assets/img/avatars/6.jpg') }}" alt="{{ fsc.user.nick }}">
+                        <img id="gravatar" name="gravatar" class="img-avatar" src="{{ asset('Plugins/CoreuiTemplate/Assets/Images/avatar.gif') }}" alt="{{ fsc.user.nick }}">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <div class="dropdown-header text-center">
