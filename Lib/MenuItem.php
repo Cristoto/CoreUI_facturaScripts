@@ -70,7 +70,7 @@ class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
     {
         return '<li class="nav-item">'
             . '<a class="nav-link" href="' . $menuItem->url . '">'
-            . $menuItem->getHTMLIcon() . \ucfirst($menuItem->title) . '</a>'
+            . $menuItem->getHTMLIcon() . '<span>' . \ucfirst($menuItem->title) . '</span></a>'
             . '</li>';
     }
 }
