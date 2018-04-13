@@ -1,9 +1,7 @@
 <?php
 /**
  * This file is part of FacturaScripts
- * Copyright (C) 2018  
- * Francesc Pineda Segarra <francesc.pineda.segarra@gmail.com>
- * Cristo Manuel Estévez Hernández <cristom.estevez@gmail.com>
+ * Copyright (C) 2017-2018  Carlos Garcia Gomez  <carlos@facturascripts.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as
@@ -25,33 +23,10 @@ namespace FacturaScripts\Plugins\CoreuiTemplate\Lib;
  *
  * @author Carlos García Gómez <carlos@facturascripts.com>
  * @author Artex Trading sa <jcuello@artextrading.com>
+ * @author Cristo Manuel Estévez Hernández <cristom.estevez@gmail.com>
  */
 class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
 {
-
-    /**
-     * Returns the HTML for the icon of the item.
-     *
-     * @return string
-     */
-    private function getHTMLIcon()
-    {
-        return empty($this->icon) ? '<i class="fa fa-fw" aria-hidden="true"></i> ' : '<i class="fa ' . $this->icon
-            . ' fa-fw" aria-hidden="true"></i> ';
-    }
-
-    /**
-     * Returns the indintifier of the menu.
-     *
-     * @param string $parent
-     *
-     * @return string
-     */
-    private function getMenuId($parent)
-    {
-        return empty($parent) ? 'menu-' . $this->title : $parent . $this->name;
-    }
-
     /**
      * Returns the html for the menu / submenu.
      *
@@ -62,25 +37,22 @@ class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
     public function getHTML($parent = '')
     {
         $active = $this->active ? ' active' : '';
+        $liActive = $this->active ? ' active open' : '';
+        $folder = $this->active ? 'fa-folder-open' : 'fa-folder';
         $menuId = $this->getMenuId($parent);
         
-        $html = empty($parent) ? '<li class="nav-item nav-dropdown">'
+        $html = empty($parent) ? '<li class="nav-item nav-dropdown' . $liActive .'">'
             . '<a class="nav-link nav-dropdown-toggle" href="#" id="' . $menuId . '">'
-            . $this->getHTMLIcon() . \ucfirst($this->title) . '</a>'
-            . '<ul class="nav-dropdown-items">' : '<li class="dropdown-submenu">'
-            . '<a class="dropdown-item' . $active . '" href="#" id="' . $menuId . '">'
+            . '<i class="fa ' . $folder . ' fa-fw" aria-hidden="true"></i> &nbsp; '
+            . '<span>' . \ucfirst($this->title) . '</span></a>'
+            . '<ul class="nav-dropdown-items">' : '<li class="nav-item nav-dropdown' . $liActive .'">'
+            . '<a class="nav-link nav-dropdown-toggle' . $active . '" href="#" id="' . $menuId . '">'
             . '<i class="fa fa-folder-open fa-fw"'
-            . ' aria-hidden="true"></i> &nbsp; ' . \ucfirst($this->title) . '</a>'
-            . '<ul class="dropdown-menu" aria-labelledby="' . $menuId . '">';
+            . ' aria-hidden="true"></i> &nbsp; <span>' . \ucfirst($this->title) . '</span></a>'
+            . '<ul class="nav-dropdown-items" aria-labelledby="' . $menuId . '">';
 
         foreach ($this->menu as $menuItem) {
-            if ($menuItem->name === "control-panel") {
-                $html .= $this->writeHtml($menuItem->menu["EditSettings"]);
-                $html .= $this->writeHtml($menuItem->menu["AdminPlugins"]);
-                $html .= $this->writeHtml( $menuItem->menu["Updater"]);
-            } else {
-                $html .= empty($menuItem->menu) ? $this->writeHtml( $menuItem) : $menuItem->getHTML($menuId);
-            }
+            $html .= empty($menuItem->menu) ? $this->writeHtml($menuItem) : $menuItem->getHTML($menuId);
         }
 
         $html .= '</ul>';
@@ -89,17 +61,16 @@ class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
 
     /**
      * Write the content of the object into html
-     * 
-     * @param String $destination
-     * @param MenuItem $menuItem
-     * 
+     *
+     * @param \FacturaScripts\Core\Lib\MenuItem $menuItem
+     *
      * @return string
      */
     private function writeHtml($menuItem)
     {
         return '<li class="nav-item">'
             . '<a class="nav-link" href="' . $menuItem->url . '">'
-            . $menuItem->getHTMLIcon() . \ucfirst($menuItem->title) . '</a>'
+            . $menuItem->getHTMLIcon() . '<span>' . \ucfirst($menuItem->title) . '</span></a>'
             . '</li>';
     }
 }
