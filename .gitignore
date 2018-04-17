@@ -13,8 +13,7 @@
 # Eclipse config files
 .project
 .settings
-.buildpath
-*lock.json
-
+.buildpath*lock.json
 *.cache
 *.lock
+/node_modules/
