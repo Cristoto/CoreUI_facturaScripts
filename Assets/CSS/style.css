@@ -12771,6 +12771,7 @@ html:not([dir="rtl"]) .sidebar-show .sidebar {
   html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-compact .app-footer {
     margin-left: 150px;
   }
+
   html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized .main,
   html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized .app-footer {
     margin-left: 50px;
@@ -13173,6 +13174,23 @@ html[dir="rtl"] .aside-menu-show .aside-menu {
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-compact .app-footer {
     margin-left: 150px;
   }
+
+/* Added this line to effect move to FS Content when minimized */
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized ul#mainTabs,
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .table-responsive,
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .container-fluid{
+    padding-left: 60px;
+  }
+     
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized div#mainTabs{
+    padding-left: 0px;
+  }
+     
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized .alert{
+    padding-left: 60px;
+  }
+  /*-----------------------------------------------*/ 
+
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .main,
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .app-footer {
     margin-left: 50px;
@@ -14247,3 +14265,4 @@ body {
   left: 10px;
 }
 /*# sourceMappingURL=style.css.map */
+/*Custom styles*/

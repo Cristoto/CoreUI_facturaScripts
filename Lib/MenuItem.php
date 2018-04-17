@@ -28,6 +28,17 @@ namespace FacturaScripts\Plugins\CoreuiTemplate\Lib;
 class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
 {
     /**
+     * Returns the HTML for the icon of the item.
+     *
+     * @return string
+     */
+    protected function getHTMLIcon()
+    {
+        return empty($this->icon) ? '<i class="nav-icon fa fa-fw" aria-hidden="true"></i> ' : '<i class="nav-icon fa ' . $this->icon
+            . ' fa-fw" aria-hidden="true"></i> ';
+    }
+
+    /**
      * Returns the html for the menu / submenu.
      *
      * @param string $parent
@@ -43,12 +54,12 @@ class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
         
         $html = empty($parent) ? '<li class="nav-item nav-dropdown' . $liActive .'">'
             . '<a class="nav-link nav-dropdown-toggle" href="#" id="' . $menuId . '">'
-            . '<i class="fa ' . $folder . ' fa-fw" aria-hidden="true"></i> &nbsp; '
-            . '<span>' . \ucfirst($this->title) . '</span></a>'
+            . '<i class="nav-icon fa ' . $folder . ' fa-fw" aria-hidden="true"></i> &nbsp; '
+            . '' . \ucfirst($this->title) . '</a>'
             . '<ul class="nav-dropdown-items">' : '<li class="nav-item nav-dropdown' . $liActive .'">'
             . '<a class="nav-link nav-dropdown-toggle' . $active . '" href="#" id="' . $menuId . '">'
-            . '<i class="fa fa-folder-open fa-fw"'
-            . ' aria-hidden="true"></i> &nbsp; <span>' . \ucfirst($this->title) . '</span></a>'
+            . '<i class="nav-icon fa fa-folder-open fa-fw"'
+            . ' aria-hidden="true"></i> &nbsp; ' . \ucfirst($this->title) . '</a>'
             . '<ul class="nav-dropdown-items" aria-labelledby="' . $menuId . '">';
 
         foreach ($this->menu as $menuItem) {
@@ -70,7 +81,7 @@ class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
     {
         return '<li class="nav-item">'
             . '<a class="nav-link" href="' . $menuItem->url . '">'
-            . $menuItem->getHTMLIcon() . '<span>' . \ucfirst($menuItem->title) . '</span></a>'
+            . $menuItem->getHTMLIcon() . \ucfirst($menuItem->title) . '</a>'
             . '</li>';
     }
 }

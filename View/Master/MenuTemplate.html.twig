@@ -69,20 +69,20 @@
                 </button>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <img id="gravatar" name="gravatar" class="img-avatar" src="{{ asset('Plugins/CoreuiTemplate/Assets/Images/avatar.gif') }}" alt="{{ fsc.user.nick }}">
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-header text-center">
-                        <strong> {{ i18n.trans('account') }}</strong>
+                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img id="gravatar" name="gravatar" class="img-avatar" src="{{ asset('Plugins/CoreuiTemplate/Assets/Images/avatar.gif') }}" alt="{{ fsc.user.nick }}">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header text-center">
+                            <strong> {{ i18n.trans('account') }}</strong>
+                            </div>
+                            <a class="dropdown-item" href="{{ fsc.user.url() }}">
+                            <i class="fa fa-user-circle fa-fw" aria-hidden="true"></i> &nbsp; {{ fsc.user.nick }}
+                            </a>
+                            <a class="dropdown-item" href="?logout=TRUE">
+                            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> &nbsp; {{ i18n.trans('logout') }}
+                            </a>
                         </div>
-                        <a class="dropdown-item" href="{{ fsc.user.url() }}">
-                        <i class="fa fa-user-circle fa-fw" aria-hidden="true"></i> &nbsp; {{ fsc.user.nick }}
-                        </a>
-                        <a class="dropdown-item" href="?logout=TRUE">
-                        <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> &nbsp; {{ i18n.trans('logout') }}
-                        </a>
-                    </div>
                     </li>
                 </ul>
                
