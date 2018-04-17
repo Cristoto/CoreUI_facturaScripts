@@ -1,6 +1,6 @@
 {
   "name": "@coreui/coreui-free-bootstrap-admin-template",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.4",
   "description": "Free Bootstrap Admin Template",
   "keywords": [
     "admin",
@@ -63,16 +63,16 @@
     "watch-js": "nodemon --watch src/js/src/ -x \"npm run js\""
   },
   "dependencies": {
-    "@coreui/coreui": "^2.0.0-beta.2",
-    "@coreui/plugin-chartjs-custom-tooltips": "0.0.1",
-    "bootstrap": "4.0.0",
+    "@coreui/coreui": "^2.0.0-beta.8",
+    "@coreui/coreui-plugin-chartjs-custom-tooltips": "1.0.0",
+    "bootstrap": "4.1.0",
     "chart.js": "^2.7.2",
     "flag-icon-css": "3.0.0",
     "font-awesome": "4.7.0",
     "jquery": "3.2.1",
     "pace-progress": "1.0.2",
     "perfect-scrollbar": "^1.3.0",
-    "popper.js": "1.12.9",
+    "popper.js": "1.14.3",
     "simple-line-icons": "2.4.1"
   },
   "engines": {

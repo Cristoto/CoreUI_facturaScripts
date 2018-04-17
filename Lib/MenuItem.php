@@ -28,6 +28,7 @@ namespace FacturaScripts\Plugins\CoreuiTemplate\Lib;
 class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
 {
     /**
+     * @Override
      * Returns the HTML for the icon of the item.
      *
      * @return string
