@@ -14251,6 +14251,10 @@ header.app-header.navbar{
   html:not([dir="rtl"]) .sidebar-xl-show.sidebar-fixed .container{
     padding-left: 200px;
   }
+
+  html:not([dir="rtl"]) .sidebar-xl-show.sidebar-fixed #no-data-msg{
+    padding: .75rem 1.25rem;
+  }
   /*-----------------------------------------------*/
 
   /* Added this line to effect move to FS Content when minimized */
@@ -14293,6 +14297,11 @@ header.app-header.navbar{
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .container{
     padding-left: 200px;
   }
+
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed #no-data-msg{
+    padding: .75rem 1.25rem;
+  }
+
   /*-----------------------------------------------*/
   /* Added this line to effect move to FS Content when minimized */
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized ul#mainTabs,
@@ -14333,6 +14342,10 @@ header.app-header.navbar{
 
   html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .container{
     padding-left: 200px;
+  }
+
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed #no-data-msg{
+    padding: .75rem 1.25rem;
   }
   /*-----------------------------------------------*/ 
 }
