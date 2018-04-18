@@ -56,10 +56,10 @@ $(document).ready(function () {
 
     //Show and hidde menu print
     $(".btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split").click(function(){
-        if( $(this + " + .dropdown-menu").hasClass("show"))
-            $(this + " + .dropdown-menu").removeClass("show");
+        if( $(".btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split + .dropdown-menu").hasClass("show"))
+            $(".btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split + .dropdown-menu").removeClass("show");
         else
-            $(this + " + .dropdown-menu").addClass("show");
+            $(".btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split + .dropdown-menu").addClass("show");
     });
     
     //Show and hidde menu filters
