@@ -44,12 +44,29 @@ $(function () {
     });
 });
 
-//Show menu admin
+//Show menus
 $(document).ready(function () {
+    //Show and hidde menu admin
     $("#gravatar").click(function(){
         if($(".nav-item.dropdown > .dropdown-menu.dropdown-menu-right").hasClass("show"))
             $(".nav-item.dropdown .dropdown-menu.dropdown-menu-right").removeClass("show");
         else
             $(".nav-item.dropdown > .dropdown-menu.dropdown-menu-right").addClass("show");
+    });
+
+    //Show and hidde menu print
+    $(".btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split").click(function(){
+        if( $(this + " + .dropdown-menu").hasClass("show"))
+            $(this + " + .dropdown-menu").removeClass("show");
+        else
+            $(this + " + .dropdown-menu").addClass("show");
+    });
+    
+    //Show and hidde menu filters
+    $(".btn-group > .btn.btn-light.dropdown-toggle").click(function(){
+        if($(".btn-group > .dropdown-menu.dropdown-menu-right").hasClass("show"))
+            $(".btn-group > .dropdown-menu.dropdown-menu-right").removeClass("show");
+        else
+            $(".btn-group > .dropdown-menu.dropdown-menu-right").addClass("show");
     });
 });

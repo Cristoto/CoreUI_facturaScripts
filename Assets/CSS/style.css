@@ -14266,3 +14266,8 @@ body {
 }
 /*# sourceMappingURL=style.css.map */
 /*Custom styles*/
+/*Style to dropdown menu filters*/
+.dropdown-menu.dropdown-menu-right.show{
+  transform: translate3d(-42px, 38px, 0px) !important;
+  top: 0;
+}
