@@ -12754,12 +12754,16 @@ html:not([dir="rtl"]) .sidebar-show .sidebar {
       padding-left: 210px;
   }
   
-  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed div#mainTabs{
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed div#mainTabs{
       padding-left: 0px;
   }
   
   html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .alert{
       padding-left: 210px;
+  }
+
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .container{
+    padding-left: 200px;
   }
   /*-----------------------------------------------*/ 
     
@@ -13164,6 +13168,10 @@ html[dir="rtl"] .aside-menu-show .aside-menu {
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .alert{
       padding-left: 210px;
   }
+
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .container{
+    padding-left: 200px;
+  }
   /*-----------------------------------------------*/
   
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .main,
@@ -13182,12 +13190,16 @@ html[dir="rtl"] .aside-menu-show .aside-menu {
     padding-left: 60px;
   }
      
-  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized div#mainTabs{
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized div#mainTabs{
     padding-left: 0px;
   }
      
-  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized .alert{
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .alert{
     padding-left: 60px;
+  }
+
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .container{
+    padding-left: 50px;
   }
   /*-----------------------------------------------*/ 
 
@@ -14270,4 +14282,8 @@ body {
 .dropdown-menu.dropdown-menu-right.show{
   transform: translate3d(-42px, 38px, 0px) !important;
   top: 0;
+}
+
+header.app-header.navbar{
+  padding-right: 15px;
 }
