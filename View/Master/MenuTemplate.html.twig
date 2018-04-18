@@ -34,7 +34,7 @@
             <link rel="stylesheet" href="{{ asset('node_modules/jquery-ui-dist/jquery-ui.min.css') }}" />
             <link rel="stylesheet" href="{{ asset('Dinamic/Assets/CSS/custom.css') }}" />
         {% endblock %}
-        {% block javascript %}
+        {% block javascripts %}
             <script src="{{ asset('node_modules/jquery/dist/jquery.min.js') }}"></script>
             <script src="{{ asset('node_modules/popper.js/dist/umd/popper.min.js') }}"></script>
             <script src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
@@ -47,7 +47,6 @@
                     var email = "{{ fsc.user.email }}";
                     var gravatar = getGravatar(email);
                     $("#gravatar").attr("src", gravatar);
-
                 });
             </script>
         {% endblock %}
@@ -112,11 +111,11 @@
             </div>
             </div>
             {% block messages %}
-            {% from 'Macro/Utils.html.twig' import message as show_message %}
-            {{ show_message(log, ['error', 'critical', 'alert', 'emergency'], 'danger') }}
-            {{ show_message(log, ['warning'], 'warning') }}
-            {{ show_message(log, ['notice'], 'success') }}
-            {{ show_message(log, ['info'], 'info') }}
+                {% from 'Macro/Utils.html.twig' import message as show_message %}
+                {{ show_message(log, ['error', 'critical', 'alert', 'emergency'], 'danger') }}
+                {{ show_message(log, ['warning'], 'warning') }}
+                {{ show_message(log, ['notice'], 'success') }}
+                {{ show_message(log, ['info'], 'info') }}
             {% endblock %}
             {% block body %}{% endblock %}
             {{ debugBarRender.render()|raw }}
@@ -129,11 +128,12 @@
                 <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/pace-progress/pace.min.js') }}"></script>
                 <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
                 <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/@coreui/coreui/dist/js/coreui.min.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('node_modules/summernote/dist/summernote-bs4.js') }}"></script>
                 <!-- Plugins and scripts required by this view-->
                 <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/chart.js/dist/Chart.min.js') }}"></script>
                 <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/Assets/JS/popovers.js') }}"></script>
                 <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/Assets/JS/tooltips.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('Plugins/CoreuiTemplate/Assets/JS/popovers.js') }}"></script>
             {% endblock %}
         </body>
      {% endblock %}

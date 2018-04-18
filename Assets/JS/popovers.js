@@ -5,7 +5,9 @@
  * --------------------------------------------------------------------------
  */
 var PopoversView = function ($) {
-  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="popover"]').popover({
+    delay: {"show": 1000, "hide": 100}
+  });
   $('.popover-dismiss').popover({
     trigger: 'focus'
   });
