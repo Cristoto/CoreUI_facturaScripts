@@ -43,3 +43,13 @@ $(function () {
         event.stopPropagation();
     });
 });
+
+//Show menu admin
+$(document).ready(function () {
+    $("#gravatar").click(function(){
+        if($(".nav-item.dropdown > .dropdown-menu.dropdown-menu-right").hasClass("show"))
+            $(".nav-item.dropdown .dropdown-menu.dropdown-menu-right").removeClass("show");
+        else
+            $(".nav-item.dropdown > .dropdown-menu.dropdown-menu-right").addClass("show");
+    });
+});
