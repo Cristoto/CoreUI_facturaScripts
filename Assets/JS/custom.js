@@ -69,4 +69,17 @@ $(document).ready(function () {
         else
             $(".btn-group > .dropdown-menu.dropdown-menu-right").addClass("show");
     });
+
+    //Show and hidde left options "informes de documentes"
+    $("#source-header0 a.pull-right").click(function(){
+        if($(this).hasClass("collapsed")){
+            $("#source-body0").removeClass("show");
+            $("#source-header0 a").removeClass("collapsed");
+            console.log("if");
+        }else{
+            $("#source-body0").addClass("show");
+            $("#source-header0 a").addClass("collapsed");
+            console.log("else");
+        }
+    });
 });
