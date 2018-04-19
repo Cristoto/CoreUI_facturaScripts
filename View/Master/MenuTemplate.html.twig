@@ -52,6 +52,10 @@
             <link rel="stylesheet" href="{{ asset('node_modules/jquery-ui-dist/jquery-ui.min.css') }}" />
             <link rel="stylesheet" href="{{ asset('Dinamic/Assets/CSS/custom.css') }}" />
         {% endblock %}
+        {# Add Specific Controller CSS #}
+        {% for css in fsc.assets['css'] %}
+            <link rel="stylesheet" href="{{ css }}" />
+        {% endfor %}
         {% block javascripts %}
             <script src="{{ asset('node_modules/jquery/dist/jquery.min.js') }}"></script>
             <script src="{{ asset('node_modules/popper.js/dist/umd/popper.min.js') }}"></script>
@@ -68,6 +72,10 @@
                 });
             </script>
         {% endblock %}
+        {# Add Specific Controller JS #}
+        {% for js in fsc.assets['js'] %}
+            <script src="{{ js }}"></script>
+        {% endfor %}
         {{ debugBarRender.renderHead()|raw }}
     </head>
      {% block fullBody %}
