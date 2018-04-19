@@ -135,6 +135,7 @@
                 {{ show_message(log, ['notice'], 'success') }}
                 {{ show_message(log, ['info'], 'info') }}
             {% endblock %}
+            {% block bodyHeaderOptions %}{% endblock %}
             {% block body %}{% endblock %}
             {{ debugBarRender.render()|raw }}
 
