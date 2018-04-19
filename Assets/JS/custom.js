@@ -54,6 +54,14 @@ $(document).ready(function () {
             $(".nav-item.dropdown > .dropdown-menu.dropdown-menu-right").addClass("show");
     });
 
+    //Show and hidde menu options Edit
+    $("div.btn-group > div.dropdown a").click(function(){
+        if($("div.btn-group > div.dropdown > div.dropdown-menu").hasClass("show"))
+            $("div.btn-group > div.dropdown > div.dropdown-menu").removeClass("show");
+        else
+            $("div.btn-group > div.dropdown > div.dropdown-menu").addClass("show");
+    });
+
     //Show and hidde menu print
     $(".btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split").click(function(){
         if( $(".btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split + .dropdown-menu").hasClass("show"))
