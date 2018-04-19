@@ -12,6 +12,10 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ /*!
+ * FacturaScript modifications (https://www.facturascripts.com/)
+ * Copyright (c) 2018 Cristo M. Estévez Hernández <cristom.estevez@gmail.com>
+ */
 :root {
   --blue: #20a8d8;
   --indigo: #6610f2;
@@ -14255,6 +14259,11 @@ header.app-header.navbar{
   html:not([dir="rtl"]) .sidebar-xl-show.sidebar-fixed #no-data-msg{
     padding: .75rem 1.25rem;
   }
+
+  html:not([dir="rtl"]) .sidebar-xl-show.sidebar-fixed .container-fluid #detail .table-responsive{
+    padding: 0px;
+  }
+
   /*-----------------------------------------------*/
 
   /* Added this line to effect move to FS Content when minimized */
@@ -14302,6 +14311,10 @@ header.app-header.navbar{
     padding: .75rem 1.25rem;
   }
 
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .container-fluid #detail .table-responsive{
+    padding: 0px;
+  }
+
   /*-----------------------------------------------*/
   /* Added this line to effect move to FS Content when minimized */
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized ul#mainTabs,
@@ -14347,5 +14360,10 @@ header.app-header.navbar{
   html:not([dir="rtl"]) .sidebar-show.sidebar-fixed #no-data-msg{
     padding: .75rem 1.25rem;
   }
+
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .container-fluid #detail .table-responsive{
+    padding: 0px;
+  }
+
   /*-----------------------------------------------*/ 
 }

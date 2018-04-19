@@ -1,7 +1,8 @@
 /*
  * This file is part of FacturaScripts
  * Copyright (C) 2018  Francesc Pineda Segarra <francesc.pineda.segarra@gmail.com>
- *
+ *                     Cristo M. Estévez Hernández <cristom.estevez@gmail.com>                     
+ * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as
  * published by the Free Software Foundation, either version 3 of the
@@ -44,7 +45,6 @@ $(function () {
     });
 });
 
-//Show menus
 $(document).ready(function () {
     //Show and hidde menu admin
     $("#gravatar").click(function(){

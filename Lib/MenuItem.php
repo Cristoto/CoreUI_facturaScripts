@@ -2,7 +2,7 @@
 /**
  * This file is part of FacturaScripts
  * Copyright (C) 2017-2018  Carlos Garcia Gomez  <carlos@facturascripts.com>
- *
+ *          
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as
  * published by the Free Software Foundation, either version 3 of the
@@ -23,8 +23,14 @@ namespace FacturaScripts\Plugins\CoreuiTemplate\Lib;
  *
  * @author Carlos García Gómez <carlos@facturascripts.com>
  * @author Artex Trading sa <jcuello@artextrading.com>
- * @author Cristo Manuel Estévez Hernández <cristom.estevez@gmail.com>
+ * 
  */
+
+ /**
+  * Modification for this theme
+  * @author Cristo M. Estévez Hernández <cristom.estevez@gmail.com>
+  * @author Francesc Pineda Segarra <francesc.pineda.segarra@gmail.com>
+  */
 class MenuItem extends \FacturaScripts\Core\Lib\MenuItem
 {
     /**
