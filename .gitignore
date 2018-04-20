@@ -16,3 +16,4 @@
 .buildpath*lock.json
 *.cache
 *.lock
+/node_modules/
